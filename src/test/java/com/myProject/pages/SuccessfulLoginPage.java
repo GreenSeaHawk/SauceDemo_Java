@@ -7,8 +7,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class SuccessfulLoginPage extends BasePage {
 
-//    WebDriver driver = Driver.get();
-
     @FindBy(id = "user-name")
     public WebElement usernameBox;
 
@@ -17,10 +15,6 @@ public class SuccessfulLoginPage extends BasePage {
 
     @FindBy(id = "login-button")
     public WebElement loginButton;
-
-    public void inputText(WebElement element, String text) {
-        element.sendKeys(text);
-    }
 
     public void login() {
         loginButton.click();
