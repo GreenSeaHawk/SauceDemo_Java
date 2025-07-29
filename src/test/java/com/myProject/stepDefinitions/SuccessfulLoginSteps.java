@@ -34,8 +34,6 @@ public class SuccessfulLoginSteps {
     @Then("The user navigates to inventory page")
     public void the_user_navigates_to_inventory_page() {
         assertTrue(Driver.get().getCurrentUrl().contains("inventory.html"));
-
-        Driver.closeDriver();
     }
 
     @Then("The user sees an x icon next to the username and password fields")
@@ -46,9 +44,20 @@ public class SuccessfulLoginSteps {
 
     @And("The user sees an error message {string}")
     public void the_user_sees_an_error_message(String expectedMessage) {
-        System.out.println(expectedMessage);
         String actualMessage = sLP.errorMessageContainer.getText();
         String errorMessage = "Epic sadface: " + expectedMessage;
         assertEquals(actualMessage, errorMessage);
+    }
+
+    @When("The user refreshes the page")
+    public void the_user_refreshes_the_page() {
+//        try {
+//            Thread.sleep(2000);  // wait before refresh
+//            sLP.refreshPage();
+//            Thread.sleep(2000);  // wait after refresh
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        sLP.refreshPage();
     }
 }

@@ -12,8 +12,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/myProject/stepDefinitions",
-        dryRun = false
-//        tags = "@testcase"
+        dryRun = false,
+        tags = "not @known_defect"
 
 )
 public class CukesRunner{

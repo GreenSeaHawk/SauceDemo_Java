@@ -15,5 +15,9 @@ public abstract class BasePage {
         element.sendKeys(text);
     }
 
+    public void refreshPage() {
+        Driver.get().navigate().refresh();
+    }
+
 
 }
