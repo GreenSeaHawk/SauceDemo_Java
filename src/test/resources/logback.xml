@@ -1,0 +1,17 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Set root log level -->
+    <root level="WARN">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+    <!-- Suppress verbose packages -->
+    <logger name="io.netty" level="WARN"/>
+    <logger name="org.openqa.selenium.remote" level="WARN"/>
+    <logger name="org.openqa.selenium.devtools" level="WARN"/>
+</configuration>
