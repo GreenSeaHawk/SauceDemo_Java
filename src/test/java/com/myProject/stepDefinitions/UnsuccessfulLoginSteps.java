@@ -21,8 +21,8 @@ public class UnsuccessfulLoginSteps {
         assertEquals(errorMessage, actualMessage);
     }
 
-    @And("The user remains on the login page")
-    public void the_user_remains_on_the_login_page() {
+    @And("The user is on the login page")
+    public void the_user_is_on_the_login_page() {
         assertEquals("https://www.saucedemo.com/", Driver.get().getCurrentUrl());
     }
 
@@ -30,6 +30,5 @@ public class UnsuccessfulLoginSteps {
     public void the_user_inputs_valid_username(String invalidUsername) {
         sLP.inputText(sLP.usernameBox, invalidUsername);
     }
-
 
 }

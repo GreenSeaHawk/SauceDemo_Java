@@ -29,13 +29,7 @@ public class SuccessfulLoginPage extends BasePage {
         loginButton.click();
     }
 
-    public boolean elementPresent(WebElement element) {
-        try {
-            return element.isDisplayed();
-        } catch (Exception e) {
-            return false;
-        }
-    }
+
 
 
 }

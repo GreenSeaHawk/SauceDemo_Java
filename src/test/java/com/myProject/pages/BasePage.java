@@ -19,5 +19,17 @@ public abstract class BasePage {
         Driver.get().navigate().refresh();
     }
 
+    public void clickOn(WebElement element) {
+        element.click();
+    }
+
+    public boolean elementPresent(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
 
 }

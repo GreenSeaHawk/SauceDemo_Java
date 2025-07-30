@@ -9,7 +9,7 @@ Feature: Unsuccessful Swag Login
     And The user inputs valid password
     And The user clicks login
     Then The user sees correct error message
-    And The user remains on the login page
+    And The user is on the login page
     Examples:
       | username                |
       | problem_user            |

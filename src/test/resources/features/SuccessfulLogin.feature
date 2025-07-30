@@ -2,13 +2,13 @@
 Feature: Login
 
   Background:
-    Given The user is on the login page
+    Given The user navigates to the login page
 
   Scenario: Login User with correct email and password
     When The user inputs valid username
     And The user inputs valid password
     And The user clicks login
-    Then The user navigates to inventory page
+    Then The user is taken to the inventory page
 
   Scenario: Login fails with empty username and password
     When The user clicks login
@@ -32,7 +32,8 @@ Feature: Login
     And The user inputs valid password
     And The user clicks login
     When The user refreshes the page
-    Then The user navigates to inventory page
+    Then The user is taken to the inventory page
+
 
 #  Might try and code at a later date:
 #  Scenario: Session ends after browser is closed

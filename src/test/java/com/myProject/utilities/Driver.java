@@ -25,11 +25,15 @@ public class Driver {
             switch (browser){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    ChromeOptions guestOptions = new ChromeOptions();
+                    guestOptions.addArguments("--guest", "--incognito");
+                    driver = new ChromeDriver(guestOptions);
                     break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+                    ChromeOptions headlessGuest = new ChromeOptions();
+                    headlessGuest.addArguments("--headless=new", "--guest", "--incognito"); // new headless mode preferred
+                    driver = new ChromeDriver(headlessGuest);
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();

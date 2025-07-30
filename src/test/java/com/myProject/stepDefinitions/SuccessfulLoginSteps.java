@@ -11,7 +11,7 @@ public class SuccessfulLoginSteps {
 
     SuccessfulLoginPage sLP = new SuccessfulLoginPage();
 
-    @Given("The user is on the login page")
+    @Given("The user navigates to the login page")
     public void the_user_is_on_the_login_page() {
         Driver.get().get("https://www.saucedemo.com/");
     }
@@ -31,8 +31,8 @@ public class SuccessfulLoginSteps {
         sLP.login();
     }
 
-    @Then("The user navigates to inventory page")
-    public void the_user_navigates_to_inventory_page() {
+    @Then("The user is taken to the inventory page")
+    public void the_user_is_taken_to_the_inventory_page() {
         assertTrue(Driver.get().getCurrentUrl().contains("inventory.html"));
     }
 
